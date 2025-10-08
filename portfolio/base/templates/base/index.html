@@ -7,7 +7,31 @@
     ================================================== -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gift Portfolio</title>
+    <title>Arison Gift - Social Media Manager Portfolio</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Arison Gift - Professional Social Media Manager specializing in social media management, marketing, and email marketing for entrepreneurs and small businesses. View my portfolio and services.">
+    <meta name="keywords" content="social media manager, marketing, email marketing, portfolio, Arison Gift, Virtually Yours, social media marketing, email campaigns, content creation">
+    <meta name="author" content="Arison Gift">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Arison Gift - Social Media Manager Portfolio">
+    <meta property="og:description" content="Arison Gift - Professional Social Media Manager specializing in social media management, marketing, and email marketing for entrepreneurs and small businesses.">
+    <meta property="og:image" content="{% static 'images/logo.png' %}">
+    <meta property="og:url" content="{% url 'base:index' %}">
+    <meta property="og:site_name" content="Arison Gift Portfolio">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Arison Gift - Social Media Manager Portfolio">
+    <meta name="twitter:description" content="Arison Gift - Professional Social Media Manager specializing in social media management, marketing, and email marketing for entrepreneurs and small businesses.">
+    <meta name="twitter:image" content="{% static 'images/logo.png' %}">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{% url 'base:index' %}">
+    
 
     <script>
         document.documentElement.classList.remove('no-js');
@@ -21,7 +45,7 @@
 
     <!-- favicons
     ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "images/logo.png" %}">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
@@ -141,7 +165,7 @@
             </div> <!-- s-intro__content-media -->                
 
             <div class="s-intro__btn-download">
-                <a class="btn btn--stroke" href="#0">Get My CV</a>
+                <a class="btn btn--stroke" href="{% static "cv/cv.pdf" %}" download>Get My CV</a>
             </div> <!-- end s-intro__btn-download -->
             
             <div class="s-intro__scroll-down">
@@ -627,7 +651,7 @@
                 </div>
           
                 <div class="column xl-6 tab-12">                    
-                    <a href="#0" class="btn btn--stroke btn--large u-fullwidth">Get My CV</a>
+                    <a href="{% static "cv/cv.pdf" %}" class="btn btn--stroke btn--large u-fullwidth" download>Get My CV</a>
                 </div>
             
             </div> <!-- end section-footer__buttons -->              
